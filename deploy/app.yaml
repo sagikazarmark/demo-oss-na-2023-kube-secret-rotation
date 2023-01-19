@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo
+  labels:
+    app: echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo
+  template:
+    metadata:
+      labels:
+        app: echo
+    spec:
+      containers:
+        - name: echo
+          image: ghcr.io/sagikazarmark/http-echo2:main
+          env:
+            - name: HELLO
+              valueFrom:
+                secretKeyRef:
+                  name: foobar
+                  key: hello
+          ports:
+            - containerPort: 8080
