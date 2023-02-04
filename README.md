@@ -18,7 +18,7 @@ This repository contains minimal code for demonstrating how [External Secrets](h
 Set up a new Kubernetes cluster using the tools of your choice (this guide uses [KinD](https://kind.sigs.k8s.io/)).
 
 ```shell
-kind cluster create
+kind create cluster
 ```
 
 Install [External Secrets](https://external-secrets.io/latest/introduction/getting-started/):
