@@ -15,11 +15,15 @@ This repository contains minimal code for demonstrating how [External Secrets](h
 
 ## Preparations
 
-Set up a new Kubernetes cluster using the tools of your choice (this guide uses [KinD](https://kind.sigs.k8s.io/)).
+Set up a new Kubernetes cluster using the tools of your choice.
+
+This guide uses [KinD](https://kind.sigs.k8s.io/):
 
 ```shell
 kind create cluster
 ```
+
+_The rest of the instructions assume your current context is set to your demo cluster._
 
 Install [External Secrets](https://external-secrets.io/latest/introduction/getting-started/):
 
@@ -113,7 +117,7 @@ Restart the app:
 kubectl rollout restart deploy http-echo
 ```
 
-(You have to restart the port forward at this point)
+_(You have to restart the port forward at this point)_
 
 The app should now return a different response:
 
