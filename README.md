@@ -11,7 +11,7 @@ This repository contains minimal code for demonstrating how [External Secrets](h
 - Ability to setup a Kubernetes cluster (eg. using [KinD](https://kind.sigs.k8s.io/))
 - kubectl
 - kubectl [view-secret plugin](https://github.com/elsesiy/kubectl-view-secret)
-- Helm
+- [Helm](https://helm.sh/)
 
 ## Preparations
 
