@@ -1,6 +1,4 @@
 /.direnv/
-/.task/
 /bin/
-/build/
+/var/
 /tmp/
-/vendor/

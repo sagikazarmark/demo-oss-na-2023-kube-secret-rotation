@@ -13,15 +13,22 @@ spec:
     metadata:
       labels:
         app: echo
+      annotations:
+        vault.security.banzaicloud.io/vault-addr: "http://vault.vault.svc.cluster.local:8200"
+
+        # Delete this annotation to enable mutations
+        vault.security.banzaicloud.io/mutate: "skip"
     spec:
       containers:
         - name: echo
-          image: ghcr.io/sagikazarmark/http-echo2:main
+          image: ghcr.io/sagikazarmark/http-echo2:v0.3.0
           env:
             - name: HELLO
               valueFrom:
                 secretKeyRef:
                   name: foobar
                   key: hello
+            - name: HELLO_AGAIN
+              value: vault:secret/data/foo/bar#hello
           ports:
             - containerPort: 8080
