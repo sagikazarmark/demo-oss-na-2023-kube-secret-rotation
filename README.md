@@ -6,7 +6,7 @@
 - Date: 2023-05-12
 - [Slides](https://slides.sagikazarmark.hu/2023-05-12-automate-secret-rotation-in-kubernetes/)
 
-This repository contains minimal code for demonstrating how [External Secrets](https://external-secrets.io/) and [Reloader](https://github.com/stakater/Reloader) work.
+This repository contains minimal code for demonstrating how [External Secrets](https://external-secrets.io/) + [Reloader](https://github.com/stakater/Reloader) and [Bank-Vaults](https://bank-vaults.dev) work.
 
 ## Prerequisites
 
